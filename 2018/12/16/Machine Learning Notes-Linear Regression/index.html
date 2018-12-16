@@ -112,7 +112,11 @@
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/24.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/25.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/26.png">
-<meta property="og:updated_time" content="2018-12-16T13:10:31.596Z">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/27.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/28.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/29.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/30.png">
+<meta property="og:updated_time" content="2018-12-16T13:33:55.468Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Machine Learning Notes-Linear Regression">
 <meta name="twitter:description" content="线性回归 线性回归可以分为：单变量线性回归(Univariate linear regression)和多变量线性回归(Multiple Variables)  单变量线性回归定义 一般的，令D={x_1,x_2...x_m}表示包含m个实例的数据集，每个示例由d个属性描述，则每个示例x_i=(x_{i1};x_{i2};...x_{id})是d维样本空间X中的一个向量，其中x_{ij}是x_{i">
@@ -456,7 +460,7 @@
 <li>但是，由于单变量线性回归的代价函数总是一个凸函数(Convex Function)，这样的函数没有局部最优解，只有全局最优解，所以在使用梯度下降法优化单变量线性回归问题时，总会得到一个全局最优解</li>
 </ul>
 <p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/14.png" alt="pic"></p>
-<ul>
+<h4 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h4><ul>
 <li>梯度可以表示为如下的形式</li>
 </ul>
 <script type="math/tex; mode=display">\frac{\partial }{\partial\theta_j}J(\theta_0,\theta_1)</script><ul>
@@ -486,11 +490,33 @@
 <p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/22.png" alt="pic"></p>
 <p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/23.png" alt="pic"></p>
 <p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/24.png" alt="pic"></p>
-<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/25.png" alt="pic"></p>
 <ul>
 <li>经过多次迭代后，得到了一个拟合度最高的假设函数</li>
 </ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/25.png" alt="pic"></p>
+<h4 id="梯度与学习率"><a href="#梯度与学习率" class="headerlink" title="梯度与学习率"></a>梯度与学习率</h4><ul>
+<li>为了研究梯度下降法是如何帮助我们找到最优解，我们设<script type="math/tex">\theta_0=0</script>，假设一开始选取的<script type="math/tex">\theta_1</script>在最低点的右侧，此时的梯度（斜率）是一个正数，从图中我们可以看出，当使用梯度下降法更新<script type="math/tex">\theta_1</script>的时候，它的值会减小，慢慢逼近最低点</li>
+</ul>
 <p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/26.png" alt="pic"></p>
+<ul>
+<li>同理，假设一开始选取的<script type="math/tex">\theta_1</script>在最低点的左侧，此时的梯度是一个负数，使用梯度下降法更新<script type="math/tex">\theta_1</script>时，它的值会增大，即从另一个方向逼近最低点</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/27.png" alt="pic"></p>
+<ul>
+<li>如果一开始选取的<script type="math/tex">\theta_1</script>恰好在最适位置，那么更新<script type="math/tex">\theta_1</script>时，它的值不会发生变化</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/28.png" alt="pic"></p>
+<ul>
+<li><p>学习率<script type="math/tex">\alpha</script>会直接影响每一次梯度下降的幅度，如果<script type="math/tex">\alpha</script>太小，那么<script type="math/tex">\theta</script>的值每次变化的也会很小，那么梯度下降的就会非常慢，相应的如果<script type="math/tex">\alpha</script>太大，那么<script type="math/tex">\theta</script>的值每次变化的会很大，梯度下降的就会非常快</p>
+</li>
+<li><p>梯度下降的过慢，会导致算法优化的时间损耗增加，但是梯度下降的过快，有可能导致在梯度下降的过程中，越过了最低点，甚至永远没有办法到达最低点（发散状态）</p>
+</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/29.png" alt="pic"></p>
+<ul>
+<li>随着越来越接近最低点，相应的梯度（绝对值）也会逐渐减小，所以每次下降的幅度也会逐渐减小，所以我们不需要改变学习率<script type="math/tex">\alpha</script>的值</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/30.png" alt="pic"></p>
 
       
     </div>
@@ -654,7 +680,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线性回归"><span class="nav-number">1.</span> <span class="nav-text">线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单变量线性回归"><span class="nav-number">1.1.</span> <span class="nav-text">单变量线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#假设函数"><span class="nav-number">1.1.2.</span> <span class="nav-text">假设函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代价函数"><span class="nav-number">1.1.3.</span> <span class="nav-text">代价函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#假设函数与代价函数"><span class="nav-number">1.1.4.</span> <span class="nav-text">假设函数与代价函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#梯度下降法"><span class="nav-number">1.1.5.</span> <span class="nav-text">梯度下降法</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线性回归"><span class="nav-number">1.</span> <span class="nav-text">线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单变量线性回归"><span class="nav-number">1.1.</span> <span class="nav-text">单变量线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#假设函数"><span class="nav-number">1.1.2.</span> <span class="nav-text">假设函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代价函数"><span class="nav-number">1.1.3.</span> <span class="nav-text">代价函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#假设函数与代价函数"><span class="nav-number">1.1.4.</span> <span class="nav-text">假设函数与代价函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#梯度下降法"><span class="nav-number">1.1.5.</span> <span class="nav-text">梯度下降法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法实现"><span class="nav-number">1.1.5.1.</span> <span class="nav-text">算法实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#梯度与学习率"><span class="nav-number">1.1.5.2.</span> <span class="nav-text">梯度与学习率</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
