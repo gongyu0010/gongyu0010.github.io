@@ -121,7 +121,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/33.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/34.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/35.png">
-<meta property="og:updated_time" content="2018-12-16T14:36:16.052Z">
+<meta property="og:updated_time" content="2018-12-16T14:41:26.774Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Machine Learning Notes-Linear Regression">
 <meta name="twitter:description" content="线性回归 线性回归可以分为：单变量线性回归(Univariate linear regression)和多变量线性回归(Multivariable linear regression)  单变量线性回归定义 一般的，令D={x_1,x_2...x_m}表示包含m个实例的数据集，每个示例由d个属性描述，则每个示例x_i=(x_{i1};x_{i2};...x_{id})是d维样本空间X中的一个向量，">
@@ -573,7 +573,11 @@
 <h4 id="均值归一化"><a href="#均值归一化" class="headerlink" title="均值归一化"></a>均值归一化</h4><ul>
 <li>除了特征缩放，还可以使用均值归一化(Mean Normalization)进行特征处理</li>
 </ul>
-<script type="math/tex; mode=display">x_i=\frac{x_i-\mu_i}{max-min}$$或者$$x_i=\frac{x_i-\mu_i}{\sigma_i}</script>
+<script type="math/tex; mode=display">x_i=\frac{x_i-\mu_i}{max-min}\\
+{\ \ \ \  x_i=\frac{x_i-\mu_i}{\sigma_i}}</script><ul>
+<li>式中的<script type="math/tex">\mu_i</script>为该组特征值的平均值，<script type="math/tex">\sigma_i</script>为该组特征值的取值范围</li>
+</ul>
+
       
     </div>
     
