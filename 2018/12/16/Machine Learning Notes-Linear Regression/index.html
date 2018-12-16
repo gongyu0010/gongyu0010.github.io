@@ -92,7 +92,8 @@
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/3.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/4.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/5.png">
-<meta property="og:updated_time" content="2018-12-16T11:47:54.422Z">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/6.png">
+<meta property="og:updated_time" content="2018-12-16T12:02:15.200Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Machine Learning Notes-Linear Regression">
 <meta name="twitter:description" content="线性回归 线性回归可以分为：单变量线性回归(Univariate linear regression)和多变量线性回归(Multiple Variables)  单变量线性回归定义 一般的，令D={x_1,x_2...x_m}表示包含m个实例的数据集，每个示例由d个属性描述，则每个示例x_i=(x_{i1};x_{i2};...x_{id})是d维样本空间X中的一个向量，其中x_{ij}是x_{i">
@@ -386,6 +387,13 @@
 <li>还是以预测房价为例，为了更方便的研究<script type="math/tex">\theta</script>和<script type="math/tex">J(\theta_0,\theta_1)</script>的关系，先令<script type="math/tex">\theta_0=0</script>，得到简化的假设函数，此时的假设函数是经过原点的直线，同样的也可以求得简化的代价函数</li>
 </ul>
 <p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/5.png" alt="pic"></p>
+<ul>
+<li>简化之后，我们选取<script type="math/tex">\theta_1=1</script>，此时的<script type="math/tex">h_\theta(x)=x</script>，下左图中的红叉表示训练样例，根据代价函数的定义，我们可以计算出当<script type="math/tex">\theta_0=0</script>，<script type="math/tex">\theta_1=1</script>时，<script type="math/tex">J(0,1)=0</script>，并将其标记在右侧坐标轴内</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/6.png" alt="pic"></p>
+<ul>
+<li>重复以上步骤，分别计算不同<script type="math/tex">\theta</script>值所对应的代价函数值，将这离散的点连接起来可以得到<script type="math/tex">J(0,\theta_1)</script>关于<script type="math/tex">\theta_1</script>的曲线，我们的目标是找到一个<script type="math/tex">\theta_1</script>使得假设函数的代价函数最小，从图像我们可以看出，当<script type="math/tex">\theta_1=1</script>时，<script type="math/tex">J(\theta)</script>取得最小值</li>
+</ul>
 
       
     </div>
