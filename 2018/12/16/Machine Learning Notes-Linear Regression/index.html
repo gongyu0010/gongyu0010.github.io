@@ -117,7 +117,8 @@
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/29.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/30.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/31.png">
-<meta property="og:updated_time" content="2018-12-16T13:57:35.295Z">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/32.png">
+<meta property="og:updated_time" content="2018-12-16T14:13:13.745Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Machine Learning Notes-Linear Regression">
 <meta name="twitter:description" content="线性回归 线性回归可以分为：单变量线性回归(Univariate linear regression)和多变量线性回归(Multivariable linear regression)  单变量线性回归定义 一般的，令D={x_1,x_2...x_m}表示包含m个实例的数据集，每个示例由d个属性描述，则每个示例x_i=(x_{i1};x_{i2};...x_{id})是d维样本空间X中的一个向量，">
@@ -534,9 +535,13 @@
 <li>类似的，多变量线性回归的假设函数记作</li>
 </ul>
 <script type="math/tex; mode=display">h_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2+...+\theta_nx_n</script><ul>
-<li>我们可以使用矩阵，来简化多变量线性回归的假设函数，其中为了方便起见</li>
+<li>我们可以使用矩阵，来简化多变量线性回归的假设函数，通常设<script type="math/tex">x_0^{(i)}=1</script>，此时，<script type="math/tex">h_\theta(x)</script>可以记作</li>
 </ul>
-
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/32.png" alt="pic"></p>
+<ul>
+<li>根据向量内积的性质，再令<script type="math/tex">\theta</script>和<script type="math/tex">x</script>为如下形式</li>
+</ul>
+<script type="math/tex; mode=display">\theta=\begin{bmatrix}\theta_0\\ \theta_1\\ \theta_2\\ .\\ .\\ \theta_n\\ \end{bmatrix}\in R^{n+1}\ \ x=\begin{bmatrix}x_0\\ x_1\\ x_2\\ .\\ .\\  x_n\\ \end{bmatrix}\in R^{n+1}</script>
       
     </div>
     
