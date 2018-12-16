@@ -87,10 +87,13 @@
 <meta property="og:site_name" content="Oasis">
 <meta property="og:description" content="线性回归- 线性回归可以分为：单变量线性回归(Univariate linear regression)和多变量线性回归(Multiple Variables) 单变量线性回归定义- 一般的，令D={x&amp;lt;sub&amp;gt;1&amp;lt;/sub&amp;gt;,x&amp;lt;sub&amp;gt;2&amp;lt;/sub&amp;gt;...x&amp;lt;sub&amp;gt;m&amp;lt;/sub&amp;gt;}表示包含m个实例的数据集，每个示例由d个">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-16T10:47:56.189Z">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/1.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/2.png">
+<meta property="og:updated_time" content="2018-12-16T10:48:34.100Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Machine Learning Notes-Linear Regression">
 <meta name="twitter:description" content="线性回归- 线性回归可以分为：单变量线性回归(Univariate linear regression)和多变量线性回归(Multiple Variables) 单变量线性回归定义- 一般的，令D={x&amp;lt;sub&amp;gt;1&amp;lt;/sub&amp;gt;,x&amp;lt;sub&amp;gt;2&amp;lt;/sub&amp;gt;...x&amp;lt;sub&amp;gt;m&amp;lt;/sub&amp;gt;}表示包含m个实例的数据集，每个示例由d个">
+<meta name="twitter:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/1.png">
 
 
 
@@ -346,15 +349,12 @@
 </code></pre><h2 id="单变量线性回归"><a href="#单变量线性回归" class="headerlink" title="单变量线性回归"></a>单变量线性回归</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><pre><code>- 一般的，令D={x&lt;sub&gt;1&lt;/sub&gt;,x&lt;sub&gt;2&lt;/sub&gt;...x&lt;sub&gt;m&lt;/sub&gt;}表示包含m个实例的数据集，每个示例由d个属性描述，则每个示例x&lt;sub&gt;i&lt;/sub&gt;=(x&lt;sub&gt;i1&lt;/sub&gt;;x&lt;sub&gt;i2&lt;/sub&gt;;...x&lt;sub&gt;id&lt;/sub&gt;)是d维样本空间X中的一个向量，其中x&lt;sub&gt;ij&lt;/sub&gt;是x&lt;sub&gt;i&lt;/sub&gt;是第i 个示例在第j个属性上的取值
 
 - 特别的，当属性的数量为1时，称之为单变量线性回归
-
-![pic](/Machine Learning Notes-Linear Regression/1.png)
-</code></pre><h3 id="假设函数"><a href="#假设函数" class="headerlink" title="假设函数"></a>假设函数</h3><pre><code>- 假设函数(Hypothesis Function)-h&lt;sub&gt;θ&lt;/sub&gt;
+</code></pre><p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/1.png" alt="pic"></p>
+<h3 id="假设函数"><a href="#假设函数" class="headerlink" title="假设函数"></a>假设函数</h3><pre><code>- 假设函数(Hypothesis Function)-h&lt;sub&gt;θ&lt;/sub&gt;
 
 - 使用某种学习算法对训练集的数据进行训练，我们可以得到特征同标记之间的某种关系，即假设函数
-
-![pic](/Machine Learning Notes-Linear Regression/2.png)
-
-- 在预测房价的例子中，假设函数就是一个房价关于面积的函数，学习算法的目标就是为了得到这个函数，这样在此之后，给定一个房子的面积，我们就可以对其房价进行预测
+</code></pre><p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/2.png" alt="pic"></p>
+<pre><code>- 在预测房价的例子中，假设函数就是一个房价关于面积的函数，学习算法的目标就是为了得到这个函数，这样在此之后，给定一个房子的面积，我们就可以对其房价进行预测
 
 - 形如下图所示的假设函数，称之为单变量线性回归
 </code></pre><script type="math/tex; mode=display">h_\theta = \theta_0 + \theta_1x</script><h3 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h3><pre><code>- 在得到了假设函数之后，就可以利用相关数据进行预测了
