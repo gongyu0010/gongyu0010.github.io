@@ -93,7 +93,10 @@
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/4.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/5.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/6.png">
-<meta property="og:updated_time" content="2018-12-16T12:02:15.200Z">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/7.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/8.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/9.png">
+<meta property="og:updated_time" content="2018-12-16T12:13:03.557Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Machine Learning Notes-Linear Regression">
 <meta name="twitter:description" content="线性回归 线性回归可以分为：单变量线性回归(Univariate linear regression)和多变量线性回归(Multiple Variables)  单变量线性回归定义 一般的，令D={x_1,x_2...x_m}表示包含m个实例的数据集，每个示例由d个属性描述，则每个示例x_i=(x_{i1};x_{i2};...x_{id})是d维样本空间X中的一个向量，其中x_{ij}是x_{i">
@@ -393,6 +396,18 @@
 <p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/6.png" alt="pic"></p>
 <ul>
 <li>重复以上步骤，分别计算不同<script type="math/tex">\theta</script>值所对应的代价函数值，将这离散的点连接起来可以得到<script type="math/tex">J(0,\theta_1)</script>关于<script type="math/tex">\theta_1</script>的曲线，我们的目标是找到一个<script type="math/tex">\theta_1</script>使得假设函数的代价函数最小，从图像我们可以看出，当<script type="math/tex">\theta_1=1</script>时，<script type="math/tex">J(\theta)</script>取得最小值</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/7.png" alt="pic"></p>
+<ul>
+<li>进而，当我们不令<script type="math/tex">\theta_0=0</script>时，代价函数的图像会发生很大的变化，我们同时考虑<script type="math/tex">\theta_0</script>e和<script type="math/tex">\theta_1</script>对<script type="math/tex">J(\theta_0,\theta_1)</script>的影响，利用MATLAB可以得到如下的图像，由于此时有两个变量，所以<script type="math/tex">J(\theta_0,\theta_1)</script>是一个曲面，曲面的最低点代表着<script type="math/tex">J(\theta_0,\theta_1)</script>的最小值</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/8.png" alt="pic"></p>
+<ul>
+<li>曲面研究起来不够方便，一般使用二维的等高线(contour plots/figures)来替代，这样可以更加直观的展示某假设函数的代价函数的变化情况</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/9.png" alt="pic"></p>
+<ul>
+<li>等高线图像中，距离中心越近的点表示<script type="math/tex">J(\theta_0,\theta_1)</script>的值越小，也就对应着3D图像中的最低点的<script type="math/tex">\theta_0</script>和<script type="math/tex">\theta_1</script></li>
 </ul>
 
       
