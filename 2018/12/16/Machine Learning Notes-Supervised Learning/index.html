@@ -79,18 +79,21 @@
 
 
 
-<meta name="description" content="监督学习定义- 监督学习是机器学习中的一个方法，可以由训练集中学到或者建立一个模式（函数/learning model），并依此模式推测新的实例  - 训练资料是由输入物件（通常是向量）和预期输出所组成  - 函数的输出可以是一个连续的值（称为回归），或是预测一个分类标签（称作分类） 回归- 回归(Regression)：目标标记为连续性数值(continuous numeric value)">
+<meta name="description" content="监督学习定义 监督学习是机器学习中的一个方法，可以由训练集中学到或者建立一个模式（函数/learning model），并依此模式推测新的实例  训练资料是由输入物件（通常是向量）和预期输出所组成  函数的输出可以是一个连续的值（称为回归），或是预测一个分类标签（称作分类）   回归 回归(Regression)：目标标记为连续性数值(continuous numeric value)">
 <meta name="keywords" content="Machine Learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Machine Learning Notes-监督学习">
-<meta property="og:url" content="http://yoursite.com/2018/12/16/Machine Learning Notes-监督学习/index.html">
+<meta property="og:title" content="Machine Learning Notes-Supervised Learning">
+<meta property="og:url" content="http://yoursite.com/2018/12/16/Machine Learning Notes-Supervised Learning/index.html">
 <meta property="og:site_name" content="Oasis">
-<meta property="og:description" content="监督学习定义- 监督学习是机器学习中的一个方法，可以由训练集中学到或者建立一个模式（函数/learning model），并依此模式推测新的实例  - 训练资料是由输入物件（通常是向量）和预期输出所组成  - 函数的输出可以是一个连续的值（称为回归），或是预测一个分类标签（称作分类） 回归- 回归(Regression)：目标标记为连续性数值(continuous numeric value)">
+<meta property="og:description" content="监督学习定义 监督学习是机器学习中的一个方法，可以由训练集中学到或者建立一个模式（函数/learning model），并依此模式推测新的实例  训练资料是由输入物件（通常是向量）和预期输出所组成  函数的输出可以是一个连续的值（称为回归），或是预测一个分类标签（称作分类）   回归 回归(Regression)：目标标记为连续性数值(continuous numeric value)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-16T08:57:46.730Z">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Supervised%20Learning/Regrssion.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Supervised%20Learning/Classfication.png">
+<meta property="og:updated_time" content="2018-12-16T09:48:19.796Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Machine Learning Notes-监督学习">
-<meta name="twitter:description" content="监督学习定义- 监督学习是机器学习中的一个方法，可以由训练集中学到或者建立一个模式（函数/learning model），并依此模式推测新的实例  - 训练资料是由输入物件（通常是向量）和预期输出所组成  - 函数的输出可以是一个连续的值（称为回归），或是预测一个分类标签（称作分类） 回归- 回归(Regression)：目标标记为连续性数值(continuous numeric value)">
+<meta name="twitter:title" content="Machine Learning Notes-Supervised Learning">
+<meta name="twitter:description" content="监督学习定义 监督学习是机器学习中的一个方法，可以由训练集中学到或者建立一个模式（函数/learning model），并依此模式推测新的实例  训练资料是由输入物件（通常是向量）和预期输出所组成  函数的输出可以是一个连续的值（称为回归），或是预测一个分类标签（称作分类）   回归 回归(Regression)：目标标记为连续性数值(continuous numeric value)">
+<meta name="twitter:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Supervised%20Learning/Regrssion.png">
 
 
 
@@ -120,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/16/Machine Learning Notes-监督学习/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/16/Machine Learning Notes-Supervised Learning/">
 
 
 
 
 
-  <title>Machine Learning Notes-监督学习 | Oasis</title>
+  <title>Machine Learning Notes-Supervised Learning | Oasis</title>
   
 
 
@@ -254,7 +257,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/16/Machine Learning Notes-监督学习/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/16/Machine Learning Notes-Supervised Learning/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yu Gong">
@@ -271,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Machine Learning Notes-监督学习</h1>
+          <h1 class="post-title" itemprop="name headline">Machine Learning Notes-Supervised Learning</h1>
         
 
         <div class="post-meta">
@@ -283,7 +286,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-16T14:45:00+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-16T17:44:54+08:00">
                 2018-12-16
               </time>
             
@@ -342,26 +345,34 @@
       
 
       
-        <h1 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><pre><code>- 监督学习是机器学习中的一个方法，可以由训练集中学到或者建立一个模式（函数/learning model），并依此模式推测新的实例
+        <h1 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><ul>
+<li><p>监督学习是机器学习中的一个方法，可以由训练集中学到或者建立一个模式（函数/learning model），并依此模式推测新的实例</p>
+</li>
+<li><p>训练资料是由输入物件（通常是向量）和预期输出所组成</p>
+</li>
+<li><p>函数的输出可以是一个连续的值（称为回归），或是预测一个分类标签（称作分类）</p>
+</li>
+</ul>
+<h3 id="回归"><a href="#回归" class="headerlink" title="回归"></a>回归</h3><ul>
+<li>回归(Regression)：目标标记为连续性数值(continuous numeric value)  </li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Supervised Learning/Regrssion.png" alt="pic"></p>
+<ul>
+<li><p>假设我们希望通过给定的房屋面积来预测其市场价格，此时该房屋的面积就是特征(feature)，房屋的售价就是目标(target)</p>
+</li>
+<li><p>首先，我们的数据不仅包含房屋的面积，还包含其相对应的价格，我们所要做的就是通过面积来预测房价，这样具有监督学习的特点</p>
+</li>
+<li><p>其次，我们的输出数据-房价，可以看作是连续的值，所以这个问题是一个回归问题</p>
+</li>
+</ul>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><ul>
+<li>分类(Classfication)：目标标记为类别型数据(category value)</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Supervised Learning/Classfication.png" alt="pic"></p>
+<ul>
+<li>假设我们希望利用现有的乳腺癌数据去预测任意乳腺肿瘤为良性还是恶性，医疗数据以肿瘤的大小以及该肿瘤是良性还是恶性组成，可以规定0代表良性，1代表恶性，这样的问题属于分类的范畴，因为我们的目标输出为一个离散值</li>
+</ul>
 
-- 训练资料是由输入物件（通常是向量）和预期输出所组成
-
-- 函数的输出可以是一个连续的值（称为回归），或是预测一个分类标签（称作分类）
-</code></pre><h3 id="回归"><a href="#回归" class="headerlink" title="回归"></a>回归</h3><pre><code>- 回归(Regression)：目标标记为连续性数值(continuous numeric value)  
-
-![pic](/Machine Learning Notes-1/Regrssion.png)
-
-- 假设我们希望通过给定的房屋面积来预测其市场价格，此时该房屋的面积就是特征(feature)，房屋的售价就是目标(target)
-
-- 首先，我们的数据不仅包含房屋的面积，还包含其相对应的价格，我们所要做的就是通过面积来预测房价，这样具有监督学习的特点
-
-- 其次，我们的输出数据-房价，可以看作是连续的值，所以这个问题是一个回归问题
-</code></pre><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><pre><code>- 分类(Classfication)：目标标记为类别型数据(category value)
-
-![pic](/Machine Learning Notes-1/Classfication.png)
-
-- 假设我们希望利用现有的乳腺癌数据去预测任意乳腺肿瘤为良性还是恶性，医疗数据以肿瘤的大小以及该肿瘤是良性还是恶性组成，可以规定0代表良性，1代表恶性，这样的问题属于分类的范畴，因为我们的目标输出为一个离散值
-</code></pre>
       
     </div>
     
