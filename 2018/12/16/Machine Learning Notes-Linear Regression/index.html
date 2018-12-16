@@ -96,7 +96,23 @@
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/7.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/8.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/9.png">
-<meta property="og:updated_time" content="2018-12-16T12:24:11.642Z">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/10.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/11.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/12.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/13.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/14.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/16.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/17.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/18.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/19.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/20.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/21.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/22.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/23.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/24.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/25.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/26.png">
+<meta property="og:updated_time" content="2018-12-16T13:10:31.596Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Machine Learning Notes-Linear Regression">
 <meta name="twitter:description" content="线性回归 线性回归可以分为：单变量线性回归(Univariate linear regression)和多变量线性回归(Multiple Variables)  单变量线性回归定义 一般的，令D={x_1,x_2...x_m}表示包含m个实例的数据集，每个示例由d个属性描述，则每个示例x_i=(x_{i1};x_{i2};...x_{id})是d维样本空间X中的一个向量，其中x_{ij}是x_{i">
@@ -416,8 +432,65 @@
 </li>
 </ul>
 <script type="math/tex; mode=display">|\bigtriangledown f|=max\bigtriangledown_vf</script><ul>
-<li>梯度下降发</li>
+<li><p>梯度下降法(Gradient Descent)是一个一阶最优化算法，通常也称为最速下降法</p>
+</li>
+<li><p>要使用梯度下降法去找一个函数的局部最小值，必须向函数上当前点对应梯度（或者近似梯度）的反方向的规定步长距离点进行迭代搜索</p>
+</li>
+<li><p>如果相反地向梯度正方向迭代进行搜索，则会接近函数的局部极大值点（这个过程被称为梯度上升法）</p>
+</li>
 </ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/10.png" alt="pic"></p>
+<ul>
+<li>可以将梯度下降法同下山联系起来，如果想要尽可能快的下坡，应该每次都往坡度最大的方向下山</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/11.png" alt="pic"></p>
+<ul>
+<li>梯度下降法得到的结果同初始状态相关，当从不同的点开始时，可能会达到不同的局部极小值（陷入局部最优解）</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/12.png" alt="pic"></p>
+<ul>
+<li>局部最优解，是因为不同的起始点导致的算法进入了不同的局部最低点</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/13.png" alt="pic"></p>
+<ul>
+<li>但是，由于单变量线性回归的代价函数总是一个凸函数(Convex Function)，这样的函数没有局部最优解，只有全局最优解，所以在使用梯度下降法优化单变量线性回归问题时，总会得到一个全局最优解</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/14.png" alt="pic"></p>
+<ul>
+<li>梯度可以表示为如下的形式</li>
+</ul>
+<script type="math/tex; mode=display">\frac{\partial }{\partial\theta_j}J(\theta_0,\theta_1)</script><ul>
+<li>梯度下降法的算法流程如下图所示，其中:=表示赋值，<script type="math/tex">\alpha</script>表示学习率，用来控制梯度下降的快慢</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/16.png" alt="pic"></p>
+<ul>
+<li><p>需要注意的是，梯度下降法每次是同时更新<script type="math/tex">\theta_0</script>和<script type="math/tex">\theta_1</script>的值</p>
+</li>
+<li><p>根据相关定义，梯度也就是代价函数对于每个<script type="math/tex">\theta</script>的偏导，那么对单变量线性回归问题使用梯度下降法的具体流程如下图所示</p>
+</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/17.png" alt="pic"></p>
+<ul>
+<li>我们将<script type="math/tex">h_\theta(x)</script>带入<script type="math/tex">J(\theta_0,\theta_1)</script>后分别计算<script type="math/tex">J(\theta_0,\theta_1)</script>相对于<script type="math/tex">\theta_0</script>和<script type="math/tex">\theta_1</script>的偏导，得到如下的结果</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/18.png" alt="pic"></p>
+<ul>
+<li>综上，得到了完整的单变量线性回归模型的梯度下降法</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/19.png" alt="pic"></p>
+<ul>
+<li>下面，我们来看一下梯度下降的全过程</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/20.png" alt="pic"></p>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/21.png" alt="pic"></p>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/22.png" alt="pic"></p>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/23.png" alt="pic"></p>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/24.png" alt="pic"></p>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/25.png" alt="pic"></p>
+<ul>
+<li>经过多次迭代后，得到了一个拟合度最高的假设函数</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/26.png" alt="pic"></p>
 
       
     </div>
