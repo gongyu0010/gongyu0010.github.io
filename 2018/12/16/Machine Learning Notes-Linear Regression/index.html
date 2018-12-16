@@ -91,7 +91,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/2.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/3.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/4.png">
-<meta property="og:updated_time" content="2018-12-16T11:30:35.475Z">
+<meta property="og:updated_time" content="2018-12-16T11:33:52.597Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Machine Learning Notes-Linear Regression">
 <meta name="twitter:description" content="线性回归- 线性回归可以分为：单变量线性回归(Univariate linear regression)和多变量线性回归(Multiple Variables) 单变量线性回归定义 一般的，令D={x_1,x_2...x_m}表示包含m个实例的数据集，每个示例由d个属性描述，则每个示例x_i=(x_{i1};x_{i2};...x_{id})是d维样本空间X中的一个向量，其中x_{ij}是x_{i">
@@ -356,19 +356,30 @@
 </li>
 </ul>
 <p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/1.png" alt="pic"></p>
-<h3 id="假设函数"><a href="#假设函数" class="headerlink" title="假设函数"></a>假设函数</h3><pre><code>- 假设函数(Hypothesis Function)-$$h_\theta(x)$$
-
-- 使用某种学习算法对训练集的数据进行训练，我们可以得到特征同标记之间的某种关系，即假设函数
-</code></pre><p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/2.png" alt="pic"></p>
-<pre><code>- 在预测房价的例子中，假设函数就是一个房价关于面积的函数，学习算法的目标就是为了得到这个函数，这样在此之后，给定一个房子的面积，我们就可以对其房价进行预测
-
-- 形如下图所示的假设函数，称之为单变量线性回归
-</code></pre><script type="math/tex; mode=display">h_\theta = \theta_0 + \theta_1x</script><h3 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h3><pre><code>- 在得到了假设函数之后，就可以利用相关数据进行预测了
-
-- 以预测房价为例，对于假设函数中的两个未知变量$$\theta_0$$、$$\theta_1$$，选择的值不同，那么模型的泛化能力也就不同，下图展示了三种不同$$\theta_0$$和$$\theta_1$$情况下所对应的假设函数
-</code></pre><p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/3.png" alt="pic"></p>
-<pre><code>- 为了选择泛化能力更强的$$\theta_0$$和$$\theta_1$$组合，可以利用均方误差(MSE)作为衡量假设函数的泛化能力的标准，即要求每个样例的估计值与真实值之间的差的平方的均值最小，此时均方误差就称作预测房价模型的代价函数，而代价函数的最优值所对应的$$\theta_0$$和$$\theta_1$$被称为优化目标
-</code></pre><p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/4.png" alt="pic"></p>
+<h3 id="假设函数"><a href="#假设函数" class="headerlink" title="假设函数"></a>假设函数</h3><ul>
+<li><p>假设函数(Hypothesis Function)-<script type="math/tex">h_\theta(x)</script></p>
+</li>
+<li><p>使用某种学习算法对训练集的数据进行训练，我们可以得到特征同标记之间的某种关系，即假设函数</p>
+</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/2.png" alt="pic"></p>
+<ul>
+<li><p>在预测房价的例子中，假设函数就是一个房价关于面积的函数，学习算法的目标就是为了得到这个函数，这样在此之后，给定一个房子的面积，我们就可以对其房价进行预测</p>
+</li>
+<li><p>形如下图所示的假设函数，称之为单变量线性回归</p>
+</li>
+</ul>
+<script type="math/tex; mode=display">h_\theta = \theta_0 + \theta_1x</script><h3 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h3><ul>
+<li><p>在得到了假设函数之后，就可以利用相关数据进行预测了</p>
+</li>
+<li><p>以预测房价为例，对于假设函数中的两个未知变量<script type="math/tex">\theta_0</script>、<script type="math/tex">\theta_1</script>，选择的值不同，那么模型的泛化能力也就不同，下图展示了三种不同<script type="math/tex">\theta_0</script>和<script type="math/tex">\theta_1</script>情况下所对应的假设函数</p>
+</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/3.png" alt="pic"></p>
+<ul>
+<li>为了选择泛化能力更强的<script type="math/tex">\theta_0</script>和<script type="math/tex">\theta_1</script>组合，可以利用均方误差(MSE)作为衡量假设函数的泛化能力的标准，即要求每个样例的估计值与真实值之间的差的平方的均值最小，此时均方误差就称作预测房价模型的代价函数，而代价函数的最优值所对应的<script type="math/tex">\theta_0</script>和<script type="math/tex">\theta_1</script>被称为优化目标</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/4.png" alt="pic"></p>
 <script type="math/tex; mode=display">Cost\ Function:J(\theta_0,\theta_1)=\frac{1}{2m}\sum_{i=0}^{m}(h_\theta(x^i)-y^i)^2</script>
       
     </div>
