@@ -121,7 +121,12 @@
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/33.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/34.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/35.png">
-<meta property="og:updated_time" content="2018-12-16T14:41:26.774Z">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/36.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/37.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/38.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/39.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/40.png">
+<meta property="og:updated_time" content="2018-12-16T15:07:54.261Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Machine Learning Notes-Linear Regression">
 <meta name="twitter:description" content="线性回归 线性回归可以分为：单变量线性回归(Univariate linear regression)和多变量线性回归(Multivariable linear regression)  单变量线性回归定义 一般的，令D={x_1,x_2...x_m}表示包含m个实例的数据集，每个示例由d个属性描述，则每个示例x_i=(x_{i1};x_{i2};...x_{id})是d维样本空间X中的一个向量，">
@@ -577,6 +582,36 @@
 {\ \ \ \  x_i=\frac{x_i-\mu_i}{\sigma_i}}</script><ul>
 <li>式中的<script type="math/tex">\mu_i</script>为该组特征值的平均值，<script type="math/tex">\sigma_i</script>为该组特征值的取值范围</li>
 </ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/36.png" alt="pic"></p>
+<h3 id="代价函数与学习率"><a href="#代价函数与学习率" class="headerlink" title="代价函数与学习率"></a>代价函数与学习率</h3><ul>
+<li>我们可以绘制出<script type="math/tex">minJ(\theta)</script>同迭代次数之间的关系图像，如下图所示，横坐标是迭代次数，纵坐标是代价函数的值</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/37.png" alt="pic"></p>
+<ul>
+<li><p>为了确定梯度下降法是否运行正常，我们通常采用作图的方法，形如上图的情况代表梯度下降法运行正常</p>
+</li>
+<li><p>同样，我们还可以用自动收敛测试的方法去确定梯度下降法是否工作正常</p>
+</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/38.png" alt="pic"></p>
+<ul>
+<li><p>每次迭代之后观察<script type="math/tex">J(\theta)</script>的值，如果迭代之后的值小于<script type="math/tex">\epsilon$（例如</script>\epsilon=10^{-3}$$）就判定为收敛</p>
+</li>
+<li><p>不过准确地选址阈值<script type="math/tex">\epsilon</script>是非常困难的，通常还是使用绘图的方法</p>
+</li>
+<li><p>通过<script type="math/tex">J(\theta)</script>和迭代次数的图像，我们可以判定学习率<script type="math/tex">\alpha</script>的选择是否合适</p>
+</li>
+</ul>
+<p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/39.png" alt="pic"></p>
+<ul>
+<li><p>如上图所示的两种情况证明<script type="math/tex">\alpha</script>的取值偏大，应该选取相对较小的<script type="math/tex">\alpha</script></p>
+</li>
+<li><p>需要注意的是：</p>
+<p>  1.如果<script type="math/tex">\alpha</script>足够小，那么<script type="math/tex">J(\theta)</script>在每次迭代之后都会减小</p>
+<p>  2.但是如果<script type="math/tex">\alpha</script>太小，梯度下降法会进行的非常缓慢，根据经验，可以使用下述的几个值进行尝试</p>
+<p>  <img src="/2018/12/16/Machine Learning Notes-Linear Regression/40.png" alt="pic"></p>
+</li>
+</ul>
 
       
     </div>
@@ -740,7 +775,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线性回归"><span class="nav-number">1.</span> <span class="nav-text">线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单变量线性回归"><span class="nav-number">1.1.</span> <span class="nav-text">单变量线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#假设函数"><span class="nav-number">1.1.2.</span> <span class="nav-text">假设函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代价函数"><span class="nav-number">1.1.3.</span> <span class="nav-text">代价函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#假设函数与代价函数"><span class="nav-number">1.1.4.</span> <span class="nav-text">假设函数与代价函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#梯度下降法"><span class="nav-number">1.1.5.</span> <span class="nav-text">梯度下降法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法实现"><span class="nav-number">1.1.5.1.</span> <span class="nav-text">算法实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#梯度与学习率"><span class="nav-number">1.1.5.2.</span> <span class="nav-text">梯度与学习率</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多变量线性回归"><span class="nav-number">1.2.</span> <span class="nav-text">多变量线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#假设函数-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">假设函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多变量线性回归的梯度下降法"><span class="nav-number">1.2.3.</span> <span class="nav-text">多变量线性回归的梯度下降法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征处理"><span class="nav-number">1.2.4.</span> <span class="nav-text">特征处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#特征缩放"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">特征缩放</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#均值归一化"><span class="nav-number">1.2.4.2.</span> <span class="nav-text">均值归一化</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线性回归"><span class="nav-number">1.</span> <span class="nav-text">线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单变量线性回归"><span class="nav-number">1.1.</span> <span class="nav-text">单变量线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#假设函数"><span class="nav-number">1.1.2.</span> <span class="nav-text">假设函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代价函数"><span class="nav-number">1.1.3.</span> <span class="nav-text">代价函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#假设函数与代价函数"><span class="nav-number">1.1.4.</span> <span class="nav-text">假设函数与代价函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#梯度下降法"><span class="nav-number">1.1.5.</span> <span class="nav-text">梯度下降法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法实现"><span class="nav-number">1.1.5.1.</span> <span class="nav-text">算法实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#梯度与学习率"><span class="nav-number">1.1.5.2.</span> <span class="nav-text">梯度与学习率</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多变量线性回归"><span class="nav-number">1.2.</span> <span class="nav-text">多变量线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#假设函数-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">假设函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多变量线性回归的梯度下降法"><span class="nav-number">1.2.3.</span> <span class="nav-text">多变量线性回归的梯度下降法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征处理"><span class="nav-number">1.2.4.</span> <span class="nav-text">特征处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#特征缩放"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">特征缩放</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#均值归一化"><span class="nav-number">1.2.4.2.</span> <span class="nav-text">均值归一化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代价函数与学习率"><span class="nav-number">1.2.5.</span> <span class="nav-text">代价函数与学习率</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
