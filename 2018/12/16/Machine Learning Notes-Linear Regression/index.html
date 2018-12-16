@@ -89,7 +89,9 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/1.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/2.png">
-<meta property="og:updated_time" content="2018-12-16T10:48:34.100Z">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/3.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/16/Machine%20Learning%20Notes-Linear%20Regression/4.png">
+<meta property="og:updated_time" content="2018-12-16T11:19:05.131Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Machine Learning Notes-Linear Regression">
 <meta name="twitter:description" content="线性回归- 线性回归可以分为：单变量线性回归(Univariate linear regression)和多变量线性回归(Multiple Variables) 单变量线性回归定义- 一般的，令D={x&amp;lt;sub&amp;gt;1&amp;lt;/sub&amp;gt;,x&amp;lt;sub&amp;gt;2&amp;lt;/sub&amp;gt;...x&amp;lt;sub&amp;gt;m&amp;lt;/sub&amp;gt;}表示包含m个实例的数据集，每个示例由d个">
@@ -359,8 +361,11 @@
 - 形如下图所示的假设函数，称之为单变量线性回归
 </code></pre><script type="math/tex; mode=display">h_\theta = \theta_0 + \theta_1x</script><h3 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h3><pre><code>- 在得到了假设函数之后，就可以利用相关数据进行预测了
 
-- 对于假设函数中的两个未知变量θ&lt;sub&gt;0&lt;/sub&gt;、θ&lt;sub&gt;1&lt;/sub&gt;，选择的值不同，那么模型的泛化能力也就不同，下图展示了三种不同θ&lt;sub&gt;0&lt;/sub&gt;和θ&lt;sub&gt;1&lt;/sub&gt;下的假设函数
-</code></pre>
+- 以预测房价为例，对于假设函数中的两个未知变量θ&lt;sub&gt;0&lt;/sub&gt;、θ&lt;sub&gt;1&lt;/sub&gt;，选择的值不同，那么模型的泛化能力也就不同，下图展示了三种不同θ&lt;sub&gt;0&lt;/sub&gt;和θ&lt;sub&gt;1&lt;/sub&gt;情况下所对应的假设函数
+</code></pre><p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/3.png" alt="pic"></p>
+<pre><code>- 为了选择泛化能力更强的θ&lt;sub&gt;0&lt;/sub&gt;和θ&lt;sub&gt;1&lt;/sub&gt;组合，可以利用均方误差(MSE)作为衡量假设函数的泛化能力的标准，即要求每个样例的估计值与真实值之间的差的平方的均值最小，此时均方误差就称作预测房价模型的代价函数，而代价函数的最优值所对应的θ&lt;sub&gt;0&lt;/sub&gt;和θ&lt;sub&gt;1&lt;/sub&gt;被称为优化目标
+</code></pre><p><img src="/2018/12/16/Machine Learning Notes-Linear Regression/4.png" alt="pic"></p>
+
       
     </div>
     
